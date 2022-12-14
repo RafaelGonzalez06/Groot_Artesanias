@@ -32,21 +32,21 @@ if (empty($_POST["message"])) {
 }
 
 
-$EmailTo = "armanmia7@gmail.com";
-$Subject = "New Message Received";
+$EmailTo = "rafa_g2023@gmail.com";
+$Subject = "Nuevo Mensaje Recivido";
 
 // prepare email body text
 $Body = "";
-$Body .= "Name: ";
+$Body .= "Nombre: ";
 $Body .= $name;
 $Body .= "\n";
 $Body .= "Email: ";
 $Body .= $email;
 $Body .= "\n";
-$Body .= "Subject: ";
+$Body .= "Asunto: ";
 $Body .= $msg_subject;
 $Body .= "\n";
-$Body .= "Message: ";
+$Body .= "Mensaje: ";
 $Body .= $message;
 $Body .= "\n";
 

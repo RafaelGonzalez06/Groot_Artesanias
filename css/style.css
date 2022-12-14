@@ -1,0 +1,163 @@
+/* boton volver arriba */
+.go-top-container {
+    position: fixed;
+    bottom: 2rem;
+    right: 1rem;
+    width: 4rem;
+    height: 4rem;
+    z-index: -1;
+}
+
+.go-top-button {
+    width: 0rem;
+    height: 0rem;
+    background: #2071b2;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .2s;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.go-top-button i {
+    position: absolute;
+    font-size: 1.7rem;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    color: #fff;
+    transition: .2s;
+}
+
+.show {
+    z-index: 10;
+}
+
+.show .go-top-button {
+    animation: popup .3s ease-in-out;
+    width: 4rem;
+    height: 4rem;
+    z-index: 11;
+}
+
+.show i{
+    transform: translate(-50%, -50%) scale(1);
+}
+/*programo la animación que se le aplica boton*/
+@keyframes popup {
+    0% {
+        width: 0rem;
+        height: 0rem;
+    }
+    50% {
+        width: 5rem;
+        height: 5rem;
+    }
+    100% {
+        width: 4rem;
+        height: 4rem;
+    }
+}
+
+/*termino el boton volver arriba*/
+
+
+/***** configuracion boton flotante modo oscuro *****/
+.switch {
+    background: #343D5B;
+    border-radius: 1000px;
+    border: none;
+    position: fixed; /*o relative*/
+    cursor: pointer;
+    display: flex;
+    outline: none;
+    left: 10px;       /*Cambia right por left para que se vea la izquierda en vez de a la derecha*/
+    top: 30px;
+    z-index: 999;
+  }
+  
+    /* after para el boton, siempre tiene que contener un content"vacio"*/
+  .switch::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute; /*es para que no se ponga al costado del boton*/
+    background: #F1F1F1;
+    top: 0;
+    left: 0;
+    right: unset; /*es para generar el evento de que se mueva el boton */
+    border-radius: 100px;
+    transition: .3s ease all;
+    box-shadow: 0px 0px 2px 2px rgba(0,0,0,.2);
+  }
+  
+  .switch.active {
+    background: orange;
+    color: #000;
+  }
+  
+  .switch.active::after {   /*despues que se activa*/
+    right: 0;
+    left: unset;
+  }
+  
+  .oscuro_claro {
+    width: 30px;
+    height: 30px;
+    line-height: 30px; /*alto del icono*/
+    display: block;
+    background: none;
+    color: #fff;
+  }
+  /**** fin de configuracion del boton modo oscuro ****/
+  
+
+
+  /*------ configuracion modo oscuro ----------*/
+body.dark {
+    background: #000;
+    color: #fff;
+}
+
+#contact .contacto_modo{
+    background: rgb(41, 35, 35);
+}
+
+div.item-boxes.wow.fadeInDown.itemboxes_modo {
+    background: rgb(167, 162, 162);
+}
+
+div#barra_progreso.progreso {
+    background-image: linear-gradient(120deg, #ffbb00 0%, #928787 100%);
+}
+
+div.boton_up {
+    background: #fff;
+}
+
+div.boton_up i{
+    color: #161718;
+}
+/*------- fin modo oscuro -----------*/
+
+
+/* barra de desplazamiento de lectura de la pagina */
+/* Progress bar */
+#barra_progreso {
+    --scrollAmount: 0%;
+    
+    background-image: linear-gradient(120deg, #ffffff 0%, #0400ff 100%);
+    width: var(--scrollAmount);
+  
+    /*  background: linear-gradient(to right, #F24E1E var(--scrollAmount), transparent 0);
+    width: 100%; */
+    
+    height: 10px;
+    position: fixed;
+    top: 0;
+
+    z-index: 999999;
+  }

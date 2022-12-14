@@ -123,6 +123,12 @@ a:not([href]):not([tabindex]):hover {
   color: #0d3559;
   position: relative;
 }
+.section-header .boletin, .boletin_info {
+  color: #ffffff;
+}
+.section-header .boletin_info {
+  color: #ffffff !important;
+}
 .section-header .section-title span {
   color: #4676fa;
 }
@@ -159,7 +165,7 @@ a:not([href]):not([tabindex]):hover {
 }
 .logo-menu a {
   font-size: 20px;
-  color: rgb(95, 47, 1);
+  color: rgb(0, 0, 0);
   font-weight: bolder;
 }
 .menu-bg {
@@ -1050,16 +1056,28 @@ footer {
   width: 40px;
   height: 40px;
   text-align: center;
-  font-size: 16px;
+  font-size: 25px;
 }
 .social-icons ul li a:hover {
   color: #ffffff;
+}
+.whatsapp a {
+  color: #0bdd16;
+}
+.whatsapp a:hover {
+  background: #0bdd16;
 }
 .facebook a {
   color: #4867aa;
 }
 .facebook a:hover {
   background: #4867aa;
+}
+.instagram a {
+  color: #E1306C;
+}
+.instagram a:hover {
+  background: linear-gradient(236deg, rgba(64,93,230,1) 0%, rgba(193,53,132,1) 52%, rgba(255,220,128,1) 100%);
 }
 .twitter a {
   color: #1da1f2;

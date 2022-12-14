@@ -3,15 +3,27 @@
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Artesanías">
     <meta name="keywords" content="Artesanias, Madera, Presente, Obsequio">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="Rafael González - RG!WebDigital">
     <title>Groot - Artesanías</title>
+    
+    <!-- link para utilizar fuentes de google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,100|Roboto+Condensed:700" rel="stylesheet" type="text/css">
+    <!-- termina el link -->
+
+    <!-- cargo el icono de la barra de titulo de la pagina -->
+    <link rel="shortcut icon" href="img/Logo_groot.png" type="image/x-icon">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="css/font-awesome.min.css"> -->
     <link rel="stylesheet" href="css/line-icons.css">
     <link rel="stylesheet" href="css/owl.carousel.css">
     <link rel="stylesheet" href="css/owl.theme.css">
@@ -21,72 +33,119 @@
     <link rel="stylesheet" href="css/menu_sideslide.css">
     <link rel="stylesheet" href="css/main.css">    
     <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Bootstrap CSS Online -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
     <!-- Estilos Personales -->
     <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--link para utilizar los iconos de font-awesome-->
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 
   </head>
+  
   <body>
-      <div class="menu-wrap">
-        <nav class="menu navbar">
-          <div class="icon-list navbar-collapse">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="#video-area">Inicio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#services">Servicios</a>
-              </li>  
-              <!-- <li class="nav-item">
-                <a class="nav-link" href="#features">Features</a>
-              </li>                             -->
-              <li class="nav-item">
-                <a class="nav-link" href="#portfolios">Nuestros Trabajos</a>
-              </li>            
-              <!-- <li class="nav-item">
-                <a class="nav-link" href="#pricing">Pricing</a>
-              </li>      -->
-              <!-- <li class="nav-item">
-                <a class="nav-link" href="#blog">Blog</a>
-              </li>  -->
-              <li class="nav-item">
-                <a class="nav-link" href="#contact">Contacto</a>
-              </li> 
-              <li class="nav-item">
-                <a class="nav-link" href="#subscribe">Subscribirse</a>
-              </li>
-            </ul>
-          </div>
-        </nav> 
-        <button class="close-button" id="close-button"><i class="lnr lnr-cross"></i></button>
-      </div>      
+    <!-- barra de desplazamiento de la pagina -->
+    <div id="barra_progreso"></div>
+    
+    <!-- Inicio pantalla de precarga -->
+    <div id="loader-wrapper1">
+      <div id="loader1">
+        <div class="spinner">
+          <div class="double-bounce1"></div>
+          <div class="double-bounce2"></div>
+        </div>
+      </div>
+      <!-- <div class="loader-section section-left"></div> -->
+      <div class="loader-section section-right"></div>
+    </div>
+    <!-- Fin pantalla de precarga -->
+
+
+    <!-- Menu Start -->
+    <div class="menu-wrap">
+      <nav class="menu navbar">
+        <!-- boton de modo oscuro Flotante-->
+        <div>
+          <button class="switch" id="switch">
+            <span class="oscuro_claro"><i class="fas fa-sun"></i></span>
+            <span class="oscuro_claro"><i class="fas fa-moon"></i></span>
+          </button>
+        </div>
+        
+        <div class="icon-list navbar-collapse">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#video-area">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Servicios</a>
+            </li>  
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="#features">Features</a>
+            </li>                             -->
+            <li class="nav-item">
+              <a class="nav-link" href="#portfolios">Nuestros Trabajos</a>
+            </li>            
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="#pricing">Pricing</a>
+            </li>      -->
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="#blog">Blog</a>
+            </li>  -->
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contacto</a>
+            </li> 
+            <li class="nav-item">
+              <a class="nav-link" href="#subscribe">Subscribirse</a>
+            </li>
+          </ul>
+        </div>
+      </nav> 
+      <button class="close-button" id="close-button"><i class="lnr lnr-cross"></i></button>
+    </div>     
+    <!-- Menu End -->
+
   	<!-- Header Section Start -->
-
     <header id="video-area" data-stellar-background-ratio="0.5">    
-      <div id="block" data-vide-bg="video/tabla1" data-vide-options="playbackRate: 0.1, resizing: Auto-resizing"></div>
-      <!-- CHEQUEAR PARA MODIFICAR EL TAMAÑO -->
+        
+      <!-- Imagen del banner y titulo -->
+        <div id="intro" class="header-container fs">
+            <div class="bcg"></div>
+            <header class="wrapper">
+              <img class="logo_banner" src="img/Logo_banner.png" alt="">
+              <h1 class="title">GROOT! Artesanías</h1>
+              <p>Un espacio donde encontrar el regalo especial!</p>
+            </header>
+        </div>
 
-      <!-- video/video -->
+        <!-- Icono y Boton Hamburguesa del menu -->
       <div class="fixed-top">
           <div class="container">
             <div class="logo-menu">
-              <a href="index.html" class="logo"><span class="lnr lnr-diamond11111"><img class="logo_groot" src="/img/Logo_groot.png" alt=""></span> GROOT</a>
+              <a href="index.html" class="logo"> <img class="logo_groot" src="img/Logo_groot.png" alt=""> <span class="lnr lnr-diamond11111 logo_titulo">GROOT</span> </a>
               <button class="menu-button" id="open-button"><i class="lnr lnr-menu"></i></button>    
             </div>           
           </div>
       </div>
-      <div class="overlay overlay-2"></div>      
+
+      <!-- <div class="overlay overlay-2"></div>      
       <div class="container">
         <div class="row justify-content-md-center">
           <div class="col-md-10">
             <div class="contents text-center">
               <img class="logo_banner" src="/img/Logo_banner.png" alt="">
               <h1 class="wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="0.3s">GROOT - Artesanías</h1>
-              <p class="lead  wow fadeIn" data-wow-duration="1000ms" data-wow-delay="400ms">Bienvenido a nuestro taller digital</p>
+              <p class="lead  wow fadeIn" data-wow-duration="1000ms" data-wow-delay="400ms">Bienvenido a nuestro taller digital</p> -->
               <!-- <a href="#" class="btn btn-common wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="400ms"><i class="lnr lnr-download"></i> Download</a> -->
-            </div>
+            <!-- </div>
           </div>
         </div> 
-      </div>      
+      </div>       -->
+    
     </header>
     <!-- Header Section End --> 
 
@@ -95,7 +154,7 @@
     <section id="services" class="section">
       <div class="container">
         <div class="section-header">          
-          <h2 class="section-title wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">Nuestro <span>Servicios</span></h2>
+          <h2 class="section-title wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s"><b>Nuestro <span>Servicios</span></b></h2>
           <hr class="lines wow zoomIn" data-wow-delay="0.3s">
           <p class="section-subtitle wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">Realizamos todo tipo de trabajos en madera.</p>
         </div>
@@ -262,7 +321,7 @@
       <!-- Container Starts -->
       <div class="container">
         <div class="section-header">          
-          <h2 class="section-title wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">Nuestros <span>Trabajos</span></h2>
+          <h2 class="section-title wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s"><b>Nuestros <span>Trabajos</span></b></h2>
           <hr class="lines wow zoomIn" data-wow-delay="0.3s">
           <p class="section-subtitle wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="0.3s">Algunos ejemplos de nuestros trabajos.</p>
         </div>
@@ -290,8 +349,8 @@
               <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 mix marketing planning">
                 <div class="portfolio-item">
                   <div class="shot-item">
-                    <a class="overlay lightbox" href="img/portfolio/img1.jpg">
-                      <img src="img/portfolio/img1.jpg" alt="" />  
+                    <a class="overlay lightbox" href="img/portfolio/destapador3.jpg">
+                      <img src="img/portfolio/destapador3.jpg" alt="" />  
                       <i class="lnr lnr-plus-circle item-icon"></i>
                     </a>
                   </div>               
@@ -300,8 +359,8 @@
               <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 mix planning">
                 <div class="portfolio-item">
                   <div class="shot-item">
-                    <a class="overlay lightbox" href="img/portfolio/img2.jpg">
-                      <img src="img/portfolio/img2.jpg" alt="" />  
+                    <a class="overlay lightbox" href="img/portfolio/destapador5.jpg">
+                      <img src="img/portfolio/destapador5.jpg" alt="" />  
                       <i class="lnr lnr-plus-circle item-icon"></i>
                     </a>
                   </div>               
@@ -310,8 +369,8 @@
               <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 mix research">
                 <div class="portfolio-item">
                   <div class="shot-item">
-                    <a class="overlay lightbox" href="img/portfolio/img3.jpg">
-                      <img src="img/portfolio/img3.jpg" alt="" />  
+                    <a class="overlay lightbox" href="img/portfolio/angeles.jpg">
+                      <img src="img/portfolio/angeles.jpg" alt="" />  
                       <i class="lnr lnr-plus-circle item-icon"></i>
                     </a>
                   </div>               
@@ -320,8 +379,8 @@
               <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 mix marketing research">
                 <div class="portfolio-item">
                   <div class="shot-item">
-                    <a class="overlay lightbox" href="img/portfolio/img4.jpg">
-                      <img src="img/portfolio/img4.jpg" alt="" />  
+                    <a class="overlay lightbox" href="img/portfolio/estante.jpg">
+                      <img src="img/portfolio/estante.jpg" alt="" />  
                       <i class="lnr lnr-plus-circle item-icon"></i>
                     </a>
                   </div>               
@@ -330,8 +389,8 @@
               <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 mix marketing planning">
                 <div class="portfolio-item">
                   <div class="shot-item">
-                    <a class="overlay lightbox" href="img/portfolio/img5.jpg">
-                      <img src="img/portfolio/img5.jpg" alt="" />  
+                    <a class="overlay lightbox" href="img/portfolio/mate.jpg">
+                      <img src="img/portfolio/mate.jpg" alt="" />  
                       <i class="lnr lnr-plus-circle item-icon"></i>
                     </a>
                   </div>               
@@ -340,8 +399,8 @@
               <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 mix planning research">
                 <div class="portfolio-item">
                   <div class="shot-item">
-                    <a class="overlay lightbox" href="img/portfolio/img6.jpg">
-                      <img src="img/portfolio/img6.jpg" alt="" />  
+                    <a class="overlay lightbox" href="img/portfolio/mate1.jpg">
+                      <img src="img/portfolio/mate1.jpg" alt="" />  
                       <i class="lnr lnr-plus-circle item-icon"></i>
                     </a>
                   </div>               
@@ -645,7 +704,7 @@
           <div class="col-md-9 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="0.3s">            
             <div class="contact-block">
               <div class="section-header">          
-                <h2 class="section-title wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">Contactanos por <span>EMAIL</span></h2>
+                <h2 class="section-title wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s"><b> Contactanos por <span>EMAIL</span></b></h2>
                 <hr class="lines wow zoomIn" data-wow-delay="0.3s">
               </div>
               <form id="contactForm">
@@ -670,7 +729,7 @@
                   </div>
                   <div class="col-md-12">
                     <div class="form-group"> 
-                      <textarea class="form-control" placeholder="Su mensaje" rows="11" data-error="Escriba su mensaje" required></textarea>
+                      <textarea id="message" class="form-control" placeholder="Su mensaje" rows="11" data-error="Escriba su mensaje" required></textarea>
                       <div class="help-block with-errors"></div>
                     </div>
                     <div class="submit-button text-center">
@@ -692,9 +751,9 @@
     <div id="subscribe" class="section">
       <div class="container">
         <div class="section-header">          
-          <h2 class="section-title wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">Susribirse a nuestro <span>Boletin Informativo</span></h2>
+          <h2 class="section-title wow fadeIn boletin" data-wow-duration="1000ms" data-wow-delay="0.3s"><b>Susribirse a nuestro <span>Boletin Informativo</span></b></h2>
           <hr class="lines wow zoomIn" data-wow-delay="0.3s">
-          <p class="section-subtitle wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">Suscríbete para recibir nuestras últimas noticias.</p>
+          <p class="section-subtitle wow fadeIn boletin_info" data-wow-duration="1000ms" data-wow-delay="0.3s">Suscríbete para recibir información sobre nuestros ultimos trabajos.</p>
         </div>
         <div class="row justify-content-md-center">
           <div class="col-md-8">
@@ -715,16 +774,17 @@
           <div class="col-md-12">
             <div class="social-icons wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="0.3s">
               <ul>
-                <li class="facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li class="twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li class="google-plus"><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                <li class="linkedin"><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                <li class="pinterest"><a href="#"><i class="fa fa-pinterest"></i></a></li>
-                <li class="dribbble"><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                <li class="whatsapp"><a href="https://wa.me/5493757677810/?text=Hola,%20me%20podría%20brindar%20mayor%20información?%20Gracias" target="_blank" title="Contactanos por whatsapp"><i class="fa-brands fa-whatsapp"></i></a></li>
+                <li class="facebook"><a href="https://es-la.facebook.com/" target="_blank" title="Siguenos en Facebook"><i class="fa-brands fa-facebook"></i></a></li>
+                <li class="instagram"><a href="https://www.instagram.com/" target="_blank" title="Siguenos en Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                <li class="twitter"><a href="https://twitter.com/" target="_blank" title="Siguenos en Twitter"><i class="fa-brands fa-twitter"></i></a></li>
+                <li class="linkedin"><a href="https://ar.linkedin.com/" target="_blank" title="Siguenos en Linkedin"><i class="fa-brands fa-linkedin"></i></a></li>
+                <li class="pinterest"><a href="https://ar.pinterest.com/" target="_blank" title="Siguenos en Pinterest"><i class="fa-brands fa-pinterest"></i></a></li>
+                <!-- <li class="dribbble"><a href="#" target="_blank" title="Siguenos en Dribbble"><i class="fa fa-dribbble"></i></a></li> -->
               </ul>
             </div>
             <div class="site-info wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="0.3s">
-              <p>Todo los derechos reservados &copy; 2022 - Diseñado & Desarrollado por <a rel="nofollow" href="https://uideck.com">RG!WebDigital</a></p>
+              <p>Todo los derechos reservados &copy; 2022 - Diseñado & Desarrollado por <a rel="nofollow" href="https://rafaelgonzalez06.github.io/Website/#">RG!WebDigital</a></p>
             </div>  
           </div>
         </div>
@@ -732,17 +792,20 @@
     </footer>
     <!-- Footer Section End --> 
 
-    <!-- Go To Top Link -->
-    <a href="#" class="back-to-top">
-      <i class="lnr lnr-arrow-up"></i>
-    </a>
-
-    <div id="loader">
-      <div class="spinner">
-        <div class="double-bounce1"></div>
-        <div class="double-bounce2"></div>
+    <!-- boton flotante Flecha Arriba -->
+    <div class="go-top-container">
+      <div class="go-top-button" id="boton_up">
+          <i class="fa fa-chevron-up"></i>
       </div>
-    </div>    
+    </div>
+    
+
+    <!-- Go To Top Link -->
+    <!-- <a href="#" class="back-to-top">
+      <i class="lnr lnr-arrow-up"></i>
+    </a> -->
+
+  
 
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
     <script src="js/jquery-min.js"></script>
@@ -765,6 +828,8 @@
     <script src="js/form-validator.min.js"></script>
     <script src="js/contact-form-script.js"></script>     
     <script src="js/main.js"></script>
+    
+    <!--<script src="js/jquery-1.9.1.min.js"></script> <!-- carga el js  para que funcione el jquery -->
     
   </body>
 </html>

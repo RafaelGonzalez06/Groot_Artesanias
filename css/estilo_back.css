@@ -1,0 +1,451 @@
+#loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+
+/* lineas del circulo */
+#loader {
+    display: block;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border-radius: 50%;
+    border: 5px solid transparent;
+    border-top-color: #559107;
+    -webkit-animation: spin 2s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+    animation: spin 2s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+    
+    z-index: 1001; /* anything higher than z-index: 1000 of .loader-section */
+}
+
+/* lineas del circulo */
+#loader:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 50%;
+    border: 5px solid transparent;
+    border-top-color: #e97110;
+    -webkit-animation: spin 3s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+    animation: spin 3s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+}
+
+/* lineas del circulo */
+#loader:after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border-radius: 50%;
+    border: 5px solid transparent;
+    border-top-color: #f9c922;
+    -webkit-animation: spin 1.5s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+    animation: spin 1.5s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+}
+
+/* animation de las lineas del circulo */
+@-webkit-keyframes spin {
+    0%   {
+        -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(0deg);  /* IE 9 */
+        transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+    }
+    100% {
+        -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(360deg);  /* IE 9 */
+        transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+    }
+}
+
+/* animation de las lineas del circulo */
+@keyframes spin {
+    0%   {
+        -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(0deg);  /* IE 9 */
+        transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+    }
+    100% {
+        -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(360deg);  /* IE 9 */
+        transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+    }
+}
+
+/* fondo que se abre y desaparece */
+#loader-wrapper .loader-section {
+    position: fixed;
+    top: 0;
+    width: 51%;
+    height: 100%;
+    /* background: black; */
+    background-image: url(../img/i_am_groot.jpg);
+    background-repeat: no-repeat;
+    /* #5f310b; */
+    z-index: 1000;
+}
+
+/* fondo que desaparece hacia la izquierda */
+#loader-wrapper .loader-section.section-left {
+    left: 0;
+}
+
+/* fondo que desaparece hacia la derecha */
+#loader-wrapper .loader-section.section-right {
+    right: 0;
+}
+
+/* Loaded */
+.loaded #loader-wrapper .loader-section.section-left {
+    -webkit-transform: translateX(-100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: translateX(-100%);  /* IE 9 */
+    transform: translateX(-100%);  /* Firefox 16+, IE 10+, Opera */
+}
+
+.loaded #loader-wrapper .loader-section.section-right {
+    -webkit-transform: translateX(100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: translateX(100%);  /* IE 9 */
+    transform: translateX(100%);  /* Firefox 16+, IE 10+, Opera */
+}
+
+.loaded #loader-wrapper .loader-section.section-right,
+.loaded #loader-wrapper .loader-section.section-left {
+    /* -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000); */
+    
+    /* el primer tiempo define la duracion de la animacion, el segundo el retraso de la animacion*/
+    transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+    /* transition: all 0.7s 0.3s ease-out(0.645, 0.045, 0.355, 1.000); */
+}
+
+.loaded #loader {
+    opacity: 0;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+.loaded #loader-wrapper {
+    visibility: hidden;
+    -webkit-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    transform: translateY(-100%);
+
+    /* -webkit-transition: all 0.3s 0.6s ease-out; */
+    transition: all 0.3s 1s ease-out;
+}
+
+/************* Fin Loaded animacion de carga *****************/
+
+
+/* JavaScript Turned Off */
+.no-js #loader-wrapper {
+    display: none;
+}
+.no-js h1 {
+    color: #222222;
+}
+/* fin de no js */
+
+
+
+/********* logo_groot ***********/
+.logo_groot {
+  width: 30px !important;
+  height: 50px !important;
+}
+
+.logo_banner {
+  width: 250px;
+  height: 160px;
+}
+
+/* **************************** */
+
+/******* body *******/
+body {
+    background-color: #000;
+    overflow: visible;  /*activa el desplazamiento de la pagina*/
+    display: block;
+}
+
+/* =Navigation */
+nav {
+    /* display: none; */
+    position: fixed;
+    right: 30px;
+    top: 50%;
+    /* -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%); */
+          transform: translateY(-50%);
+    text-align: right;
+    z-index: 100; }
+
+    nav a {
+      display: block;
+      line-height: 25px;
+      position: relative;
+      padding-right: 20px;
+      color: #ffffff;
+      text-decoration: none; }
+
+      nav a:hover .nav-label {
+        /* -webkit-transform: translateX(0);
+            -ms-transform: translateX(0); */
+              transform: translateX(0);
+        opacity: 1;
+        visibility: visible; }
+        
+    nav .nav-dot {
+      display: block;
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      background-color: rgba(102, 255, 0, 0.959);
+      border-radius: 100%;
+      /* -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%); */
+              transform: translateY(-50%);
+      /* -webkit-transition: all 0.3s linear; */
+              transition: all 0.3s linear; }
+
+    nav .nav-label {
+      display: block;
+      opacity: 0.5;
+      visibility: hidden;
+      /* -webkit-transform: translateX(-10px);
+          -ms-transform: translateX(-10px); */
+              transform: translateX(-10px);
+      /* -webkit-transition: all 0.2s cubic-bezier(.17, .67, .83, .67); */
+              transition: all 0.2s cubic-bezier(.17, .67, .83, .67); }
+
+    nav.is-dark a {
+      color: #212121; }
+
+    nav.is-dark .nav-dot {
+      background-color: rgba(0, 0, 0, 0.5); }
+
+    nav.is-light a {
+      color: #ffffff; }
+
+    nav.is-light .nav-dot {
+      background-color: rgba(255, 255, 255, 0.5); }
+
+    nav ul {
+      margin: 0;
+      padding: 0; }
+
+    nav li {
+      width: auto;
+      list-style: none; }
+
+
+
+    /* para hacer que se amplie la foto */
+
+    /* =Header */
+.header-container {
+    text-align: center;
+    color: #ffffff; }
+
+    .header-container .wrapper {
+      padding-top: 120px;
+      z-index: 2;
+      position: relative; }
+
+    .header-container .bcg {
+        transition: transform 8s ease-in;
+        transform: scale(1.10);  /*tamaño final*/
+        transform-origin: top center; }
+
+    .header-container.is-loaded .bcg {
+        transform: scale(1); }  /*tamaño inicial*/
+
+  
+  .bcg {
+    background: no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.5; }
+
+    .header-container .bcg {
+      background-image: url(../img/groot_oservando.jpg);
+      background-repeat: no-repeat;
+      background-size: cover; }
+
+      /* tamaño del header de la imagen que amplia */
+.fs {
+    height: 107vh; } /*105*/
+
+
+
+.main {
+    height: 100%;
+    position: relative;
+    }
+
+    #primero {
+        height: 200vh;
+       
+        color: #fff;
+        }
+    #segundo {
+        height: 100vh;
+        
+        color: #fff;
+        }
+    #tercero {
+        height: 100vh;
+        
+        color: #fff;
+        }
+
+
+
+/*===== SLIDER ONE =====*/
+.slider-area {
+    padding-top: 94px; }
+    .slider-area .bd-example .carousel .carousel-inner {
+      background-color: #38f9d7; }
+      .slider-area .bd-example .carousel .carousel-inner .carousel-item {
+        height: 700px; }
+        @media only screen and (min-width: 992px) and (max-width: 1199px) {
+          .slider-area .bd-example .carousel .carousel-inner .carousel-item {
+            height: 600px; } }
+        @media only screen and (min-width: 768px) and (max-width: 991px) {
+          .slider-area .bd-example .carousel .carousel-inner .carousel-item {
+            height: 600px; } }
+        @media (max-width: 767px) {
+          .slider-area .bd-example .carousel .carousel-inner .carousel-item {
+            height: 400px; } }
+        .slider-area .bd-example .carousel .carousel-inner .carousel-item .carousel-caption {
+          top: 50%;
+          bottom: auto;
+          /* -webkit-transform: translateY(-50%);
+          -moz-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+          -o-transform: translateY(-50%); */
+          transform: translateY(-50%);
+          width: 100%;
+          left: 0; }
+          .slider-area .bd-example .carousel .carousel-inner .carousel-item .carousel-caption .carousel-title {
+            font-size: 44px;
+            font-weight: 700;
+            color: #fff;
+            line-height: 55px; }
+            @media (max-width: 767px) {
+              .slider-area .bd-example .carousel .carousel-inner .carousel-item .carousel-caption .carousel-title {
+                font-size: 24px;
+                line-height: 32px; } }
+              .slider-area .bd-example .carousel .carousel-inner .carousel-item .carousel-caption .carousel-btn li {
+                display: inline-block;
+                margin: 16px 8px 0; }
+            @media (max-width: 767px) {
+              .slider-area .bd-example .carousel .carousel-inner .carousel-item .carousel-caption .carousel-btn li {
+                margin: 16px 3px 0; } }
+              .slider-area .bd-example .carousel .carousel-inner .carousel-item .carousel-caption .carousel-btn li a.rounded-three {
+                border: 0; }
+              .slider-area .bd-example .carousel .carousel-inner .carousel-item .carousel-caption .carousel-btn li a.rounded-one {
+                border-color: #fff;
+                color: #fff; }
+              .slider-area .bd-example .carousel .carousel-inner .carousel-item .carousel-caption .carousel-btn li a.rounded-one:hover {
+                background-color: rgba(255, 255, 255, 0.3); }
+    .slider-area .bd-example .carousel .carousel-control-prev, .slider-area .bd-example .carousel .carousel-control-next {
+      top: 50%;
+      width: auto;
+      height: auto;
+      font-size: 70px;
+      color: #fff;
+      /* -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      -o-transform: translateY(-50%); */
+      transform: translateY(-50%);
+      bottom: auto;
+      left: 0px;
+      opacity: 0;
+      z-index: 99;
+      /* -webkit-transition: all 0.3s ease-out 0s;
+      -moz-transition: all 0.3s ease-out 0s;
+      -ms-transition: all 0.3s ease-out 0s;
+      -o-transition: all 0.3s ease-out 0s; */
+      transition: all 0.3s ease-out 0s; }
+      @media only screen and (min-width: 992px) and (max-width: 1199px) {
+        .slider-area .bd-example .carousel .carousel-control-prev, .slider-area .bd-example .carousel .carousel-control-next {
+          left: 30px;
+          font-size: 50px; } }
+      @media only screen and (min-width: 768px) and (max-width: 991px) {
+        .slider-area .bd-example .carousel .carousel-control-prev, .slider-area .bd-example .carousel .carousel-control-next {
+          left: 30px;
+          font-size: 50px; } }
+      @media (max-width: 767px) {
+        .slider-area .bd-example .carousel .carousel-control-prev, .slider-area .bd-example .carousel .carousel-control-next {
+          left: 20px;
+          font-size: 20px; } }
+      @media only screen and (min-width: 576px) and (max-width: 767px) {
+        .slider-area .bd-example .carousel .carousel-control-prev, .slider-area .bd-example .carousel .carousel-control-next {
+          font-size: 34px; } }
+    .slider-area .bd-example .carousel .carousel-control-next {
+      right: 0px;
+      left: auto; }
+      @media only screen and (min-width: 992px) and (max-width: 1199px) {
+        .slider-area .bd-example .carousel .carousel-control-next {
+          right: 40px; } }
+      @media only screen and (min-width: 768px) and (max-width: 991px) {
+        .slider-area .bd-example .carousel .carousel-control-next {
+          right: 40px; } }
+      @media (max-width: 767px) {
+        .slider-area .bd-example .carousel .carousel-control-next {
+          right: 20px; } }
+    .slider-area .bd-example .carousel .carousel-indicators {
+      margin-bottom: 20px; }
+      .slider-area .bd-example .carousel .carousel-indicators li {
+        width: 8px;
+        height: 8px;
+        background-color: rgba(255, 255, 255, 0.3);
+        border-radius: 50px;
+        border: 0; }
+        .slider-area .bd-example .carousel .carousel-indicators li.active {
+          width: 16px;
+          background-color: #fff;
+          border-radius: 5px; }
+    .slider-area .bd-example .carousel:hover .carousel-control-prev {
+      left: 70px;
+      opacity: 1; }
+    .slider-area .bd-example .carousel:hover .carousel-control-next {
+      right: 70px;
+      opacity: 1; }
+    
+.slider-3 {
+padding-top: 0px; }
+.slider-3 .bd-example .carousel .carousel-inner .carousel-item {
+    height: 850px; }
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .slider-3 .bd-example .carousel .carousel-inner .carousel-item {
+        height: 650px; } }
+    @media (max-width: 767px) {
+    .slider-3 .bd-example .carousel .carousel-inner .carousel-item {
+        height: 550px; } }
+    @media only screen and (min-width: 576px) and (max-width: 767px) {
+    .slider-3 .bd-example .carousel .carousel-inner .carousel-item {
+        height: 650px; } }
+      
+
+/* Fin del carrusel */
+/* ------------ */
+
+

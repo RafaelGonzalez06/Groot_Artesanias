@@ -50,7 +50,8 @@
 	border: none;
 	font-size: 30px;
 	color: #fff;
-	background: transparent;
+	background: #000;
+	border-radius: 15px;
 	top: 15px;
 	right: 0;
 	line-height: 42px;
