@@ -182,7 +182,7 @@ body {
     background-color: #000;
 }
 
-a {
+.logo-menu .logo {
     text-decoration: none !important;
 }
 
@@ -301,7 +301,17 @@ nav {
 
 /* tamaño del header de la imagen que amplia */
 .fs {
-    height: 107vh; } /*105*/
+    height: 105vh; } /*105*/
 
-
-
+@media (max-width: 640px) {
+    .fs {
+        height: 60vh;
+        width: 50vw;
+    }
+}
+@media (max-width: 1024px) {
+    .fs {
+        height: 80vh;
+        width: 70vw;
+    }        
+}

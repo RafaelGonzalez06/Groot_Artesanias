@@ -41,8 +41,8 @@ a {
   outline: none;
 }
 .btn-common {
-  border: 2px solid #4676fa;
-  background-color: #4676fa;
+  border: 2px solid #4676fa !important;
+  background-color: #4676fa !important;
   position: relative;
   z-index: 1;
   border-radius: 4px;
@@ -190,6 +190,7 @@ a:not([href]):not([tabindex]):hover {
 }
 .close-button {
   cursor: pointer;
+  border-radius: 5px 0px 0px 5px;
 }
 .navbar-light .navbar-nav .nav-item {
   margin-left: 15px;
@@ -572,7 +573,7 @@ a:not([href]):not([tabindex]):hover {
 .controls .mixitup-control-active {
   color: #4676fa !important;
   border-color: #4676fa;
-  background: transparent;
+  background: transparent !important;
 }
 .controls .btn {
   text-transform: uppercase;
