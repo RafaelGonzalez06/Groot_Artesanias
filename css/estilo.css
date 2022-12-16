@@ -190,7 +190,7 @@ body {
 nav {
     /* display: none; */
     position: fixed;
-    right: 30px;
+    right: 20px;
     top: 50%;
     /* -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%); */

@@ -73,9 +73,9 @@
     cursor: pointer;
     display: flex;
     outline: none;
-    left: 10px;       /*Cambia right por left para que se vea la izquierda en vez de a la derecha*/
-    top: 30px;
-    z-index: 999;
+    right: 25px;       /*Cambia right por left para que se vea la izquierda en vez de a la derecha*/
+    /* top: 30px; */
+    /* z-index: 999; */
   }
   
     /* after para el boton, siempre tiene que contener un content"vacio"*/
